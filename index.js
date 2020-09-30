@@ -31,6 +31,10 @@ client.connect(err => {
         })
     })
 
+    app.get('/', (req, res) => {
+        res.send('hello from ema-john-server side')
+    })
+
     app.get('/products', (req, res) => {
         productsCollection.find({})
         .toArray((err, documents) =>{
